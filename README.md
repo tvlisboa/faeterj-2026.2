@@ -1,123 +1,165 @@
-# 📚 IT1 — Inglês Técnico 1
+# 📚 1º Semestre — Materiais Acadêmicos
 
-Repositório destinado ao armazenamento dos documentos, atividades, exercícios e materiais da disciplina **IT1 — Inglês Técnico 1**.
-
----
-
-## 📖 Conteúdo Programático
-
-### 1. Tempos Verbais — Presente, Passado e Futuro
-
-#### Tempo presente
-- Verb to be e expressões;
-- Present Continuous;
-- Present Simple;
-- Have e Have Got;
-- Exercícios de gramática.
-
-#### Tempo passado
-- Was / Were;
-- Past Simple;
-- Past Continuous.
-
-#### Tempo futuro
-- Presente com significado de futuro:
-  - *Are you doing... tomorrow?*
-- Will / Shall.
+Repositório destinado à organização e armazenamento dos materiais, atividades, exercícios, trabalhos, anotações e documentos desenvolvidos ao longo do primeiro semestre da graduação.
 
 ---
 
-### 2. Present Perfect
+## 📖 Disciplinas
 
-- Present Perfect;
-- Verbos regulares e irregulares;
-- Uso de:
-  - For;
-  - Since;
-  - Ago;
-- Present Perfect × Past Simple;
-- Exercícios de gramática.
+### 🇬🇧 IT1 — Inglês Técnico 1
 
----
+Conteúdos relacionados à estrutura básica da língua inglesa:
 
-### 3. Verbos Modais e Imperativo
-
-#### Verbos modais
-- Might;
-- Can;
-- Could;
-- Must;
-- Mustn't;
-- Don't need to;
-- Should;
-- I have to...
-
-#### Expressões
-- Would you like...?
-- I'd like...
-- I used to...
-
-#### Imperativo
-- Do this!
-- Don't do that!
-- Let's do this!
-
-- Exercícios de gramática.
+- Tempos verbais: presente, passado e futuro
+- Present Perfect
+- Verbos regulares e irregulares
+- Verbos modais e imperativo
+- Estruturas interrogativas
+- Pronomes e determinantes
+- Adjetivos e advérbios
+- Estrutura e ordem das palavras
+- Técnicas de leitura: *Skimming* e *Scanning*
+- Exercícios de gramática e interpretação
 
 ---
 
-### 4. Estruturas Interrogativas, Verbos e Determinantes
+### 💻 PRC — Programação e Construção de Programas
 
-#### Formas interrogativas
-- Who;
-- How;
-- What;
-- When.
+Fundamentos de algoritmos, programação e desenvolvimento de aplicações:
 
-#### Estruturas de frases
-- Ordem direta;
-- Ordem indireta.
-
-#### Diferentes usos dos verbos
-- Go;
-- Get;
-- Make;
-- Have.
-
-#### Determinantes e pronomes
-- This / That / These / Those;
-- One / Ones;
-- Some / Any;
-- Every / All;
-- Both / Either / Neither;
-- A lot / Much / Many;
-- Little / Few.
-
-- Exercícios de gramática.
+- Algoritmos e fluxogramas
+- Estruturas de sequência, decisão e repetição
+- Fundamentos da programação imperativa
+- Linguagens de alto e baixo nível
+- Compilação e interpretação
+- Linguagem C
+- Tipos de dados e operadores
+- Entrada e saída de dados
+- Estruturas de controle
+- Depuração e identificação de erros
+- Estruturas de dados
+- Modularização de programas
+- Funções, escopo e passagem de parâmetros
+- Recursividade
+- Ponteiros
+- Documentação e boas práticas de programação
 
 ---
 
-### 5. Adjetivos, Advérbios e Leitura
+### 🖥️ OC1 — Organização de Computadores 1
 
-- Adjetivos e advérbios;
-- Ordem das palavras nas frases;
-- Níveis e técnicas de leitura;
-  - Skimming;
-  - Scanning;
-- Estudo da Língua Inglesa em sua estrutura básica;
-- Exercícios de gramática.
+Estudo dos fundamentos da computação, arquitetura e organização dos computadores:
+
+- História e evolução da computação
+- Arquitetura de Von Neumann
+- Bits, bytes e representação de dados
+- Sistemas de numeração e conversão de bases
+- Aritmética computacional
+- Representação de números inteiros e ponto flutuante
+- Códigos de caracteres: ASCII, EBCDIC e Unicode
+- Organização da CPU
+- Registradores, ULA e decodificadores
+- Organização e tipos de memória
+- Memória RAM, ROM e Cache
+- Barramentos
+- Ciclo de execução de instruções
+- Arquiteturas RISC e CISC
+- Controle do processador
+- Interrupções
+- Entrada e saída
+- Periféricos
+- Álgebra Booleana
+- Portas lógicas
+- Mapas de Karnaugh
+- Circuitos combinacionais
+- Circuitos sequenciais
 
 ---
 
-## 📂 Organização do Repositório
+### 📐 MAD1 — Matemática Aplicada e Discreta 1
+
+Conteúdos matemáticos aplicados à computação e à resolução de problemas:
+
+- Teoria dos conjuntos
+- Especificação de conjuntos
+- Operações entre conjuntos
+- Diagramas de Venn
+- Conjunto das partes e partições
+- Produto cartesiano
+- Relações e suas propriedades
+- Propriedades dos números inteiros
+- Operações e relações de ordem
+- Teorema Fundamental da Aritmética
+- Algoritmo da divisão
+- MMC e MDC
+- Algoritmo de Euclides
+- Divisibilidade
+- Relações de congruência
+- Matrizes e operações matriciais
+- Determinantes
+- Matrizes inversas
+- Sistemas lineares
+- Vetores e operações vetoriais
+- Transformações lineares
+- Matrizes de transformações lineares
+- Reflexão
+- Dilatação
+- Cisalhamento
+- Rotação
+
+---
+
+### 🖥️ LFT — Laboratório de Fundamentos de Tecnologia
+
+Introdução aos fundamentos da informática e utilização do computador como ferramenta de trabalho:
+
+- Introdução à arquitetura de computadores
+- Uso do computador como ferramenta de trabalho
+- Equipamentos e acessórios
+- Instalação e configuração básica de equipamentos
+- Fundamentos de informática
+- Arquivos e diretórios
+- Criação e organização de pastas
+- Cópia, remoção e exclusão de arquivos
+- Editores de texto
+- Planilhas eletrônicas
+- Apresentações
+- Calculadora
+- Ferramentas e utilitários básicos
+
+---
+
+## 📂 Organização do Repositório - ESTRUTURAS FUTURAS
 
 ```text
-IT1/
-├── README.md
-├── 01-tempos-verbais/
-├── 02-present-perfect/
-├── 03-verbos-modais-e-imperativo/
-├── 04-interrogativas-e-determinantes/
-├── 05-adjetivos-advérbios-e-leitura/
-├── exercicios/
-└── materiais/
+1-semestre/
+│
+├── IT1/
+│   ├── materiais/
+│   ├── exercicios/
+│   ├── trabalhos/
+│   └── anotacoes/
+│
+├── PRC/
+│   ├── materiais/
+│   ├── exercicios/
+│   ├── trabalhos/
+│   └── projetos/
+│
+├── OC1/
+│   ├── materiais/
+│   ├── exercicios/
+│   ├── trabalhos/
+│   └── anotacoes/
+│
+├── MAD1/
+│   ├── materiais/
+│   ├── exercicios/
+│   ├── trabalhos/
+│   └── anotacoes/
+│
+└── LFT/
+    ├── materiais/
+    ├── atividades/
+    ├── trabalhos/
+    └── anotacoes/
