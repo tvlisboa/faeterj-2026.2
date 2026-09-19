@@ -1,0 +1,32 @@
+ROOT
+	##Descrição
+	O root é o usuário com o maior nivel de autorizacao dentro do Linux
+	Um exemplo associado ao root - e que pode criar novos usuários, remover usuários
+	e alterar as configurações do sistema.
+	
+	##Algumas observacoes importantes
+	-  Na distribuição Ubuntu, se um usuário pertence ao grupo sudo, 
+	ele pode executar tarefas e/ou comandos como root nas duas 
+	formas descritas abaixo.
+	1 - Utilizando o SUDO antes do comando e quando é solicitado pelo sistema, digitando a propria senha.
+			sudo fdisk -l
+			
+	2 - Pode se tornar root com o comando sudo no ambiente shell em que se estÁ trabalhando, digitando
+			sudo su
+	    e em seguida, fornecendo a prÓpria senha. a partir desta autenticacao nÃo hÁ mais necessidade de usar o comando sudo, pois
+	    o usuÁrio atual estarÁ atuando como root do sistema.
+	    
+	   - Como alterar entre root e usuario normal no linux?
+	   	Para podermos alternar entre usuÁrio  sudo a partir de uma conta comum - utilize sempre o comando
+	   	sudo -i ou sudo su -, que ira solicitar a seguir a senha.
+	   	
+	   	Para voltar  ao usuario comum , como fazemos?
+	   	Podemos transitar entre root e sudo de duas maneiras, utilizando o crl+d ou digitando exit no shell, assim encerrando a sessao e retornando
+	   	ao usuario normal.
+	   
+	   ##Principais diferencas entre sudo e root
+	   Para descobrir quais os usuários que estão no grupo sudo, basta verificar o arquivo /etc/group. 
+	   Por exemplo, a linha abaixo mostra uma configuração onde dois usuários, maria e pedro, estão no grupo sudo.
+	   
+	   Para incluir um usuário no grupo sudo, use o comando addgroup. Abaixo, é mostrado um exemplo onde o usuário aluno ganha a permissão de executar qualquer comando como root.
+	   		sudo addgroup aluno sudo
