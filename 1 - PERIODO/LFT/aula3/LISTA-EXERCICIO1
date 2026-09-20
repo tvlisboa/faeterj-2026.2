@@ -1,0 +1,123 @@
+1 - man top
+	❯ man top  
+	Resposta:
+	DESCRIPTION
+	The  top program provides a dynamic real-time view of a running system.
+       	It can display  system  summary  information  as  well  as  a  list  of
+       	processes  or threads currently being managed by the Linux kernel.  The
+       	types of system summary information shown and the types, order and size
+       	of information displayed for processes are all  user  configurable  and
+       	that configuration can be made persistent across restarts.
+
+2 - Mostre a hora atual do sistema
+	date
+	Resposta:
+	sáb 19 set 2026 20:12:13 -03
+
+3 - Crie o diretório ~/RevisaoLFT
+	pwd
+	/home/lisboa-zorin
+	mkdir ~/RevisaoLFT
+	
+4 - No diretório ~/RevisaoLFT - crie os diretorios atividade1 e atividade2
+	ls
+	mkdri atividade1 atividade2
+
+5 - Dentro do diretório ~/RevisaoLFT, liste o conteúdo do diretório /etc
+	ls /etc
+
+6 - Entre no diretorio Atividade1 e mostre o caminho do diretório corrente
+	ls
+	pwd
+	/home/lisboa-zorin/RevisaoLFT/atividade1
+
+7 - Crie o arquivo trabalho1.txt dentro do diretório atividade1, e o arquivo trabalho2.txt dentro do diretório atividade2.
+	pwd
+	ls
+	cd atividade1
+	touch trabalho1.txt
+	cd ..
+	ls
+	cd atividade2
+	touch trabalho2.txt
+	cd ..
+	tree
+	├── atividade1
+	│   └── trabalho1.txt
+	└── atividade2
+	    └── trabalho2.txt
+
+8 - Copie o arquivo trabalho1.txt para atividade2.
+	cp atividade1/trabalho1.txt atividade2
+	├── atividade1
+	│   └── trabalho1.txt
+	└── atividade2
+	    ├── trabalho1.txt
+	    └── trabalho2.txt
+
+9 - Dentro do diretório atividade1 - crie um  arquivo "numeros.txt",
+utilizando o comando cat, contendo os seguinter numeros:
+	100
+	50
+	25
+	1
+	2
+	
+	cat > numeros.txt
+	100
+	50
+	25
+	1
+	2
+	
+	aperte crlt + d 
+	de ls para listar os arquivos e posteriormente cat numeros.txt
+	para exibicao do conteudo
+	
+10 - Ainda dentro do diretorio atividade1 - crie um arquivo chamado numeros2.txt que contenha
+a ordem inversa aos numeros informados no arquivo numeros.txt, utilizando apenas um comando
+	cat > ativdade1/numeros2.txt
+	2
+	1
+	25
+	50
+	100
+	
+	crtl+d 
+	ls
+	cd atividade1 
+	cat numeros2.txt
+	
+11 - Mova o arquivo numeros2.txt para o diretorio atividade2
+	sudo su
+	mv atividade1/numero2.txt atividade2/
+	ls
+	tree
+	├── atividade1
+	│   ├── numeros.txt
+	│   └── trabalho1.txt
+	└── atividade2
+	    ├── numeros2.txt
+	    ├── trabalho1.txt
+	    └── trabalho2.txt
+
+12 -  APague o diretorio atividade1
+	rm -r atividade1
+	tree
+	└── atividade2
+	    ├── numeros2.txt
+	    ├── trabalho1.txt
+	    └── trabalho2.txt
+
+13 - Dentro do diretorio atividade2 - listar todos os arquivos com a extensao ".conf" do 
+diretorio /ect e guardar essa lista em um arquivo chamado "listaconf.txt"
+
+14 - Exiba as 5 primeiras linhas do arquivo listaconf.txt
+
+15 - Pesquise e descubra qual o comando que pode ser eusado para exibir informacoes sobre o sistema OPERACIONAL em uso.
+Execute o comando e salve as informações dentro de um arquivo.
+
+	
+	
+	
+	
