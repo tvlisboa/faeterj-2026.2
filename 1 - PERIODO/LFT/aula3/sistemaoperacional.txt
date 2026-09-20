@@ -1,0 +1,13 @@
+ Static hostname: Lisboa-zorin
+       Icon name: computer-desktop
+         Chassis: desktop 🖥️
+      Machine ID: 7a379fc41b234230a72362b983e9e00d
+         Boot ID: 69e30f837df04753afac7ac07d20b177
+Operating System: Zorin OS 18.1
+          Kernel: Linux 7.0.0-31-generic
+    Architecture: x86-64
+ Hardware Vendor: Micro-Star International Co., Ltd.
+  Hardware Model: MS-7B79
+Firmware Version: 1.K0
+   Firmware Date: Sat 2022-07-23
+    Firmware Age: 4y 1month 4w
