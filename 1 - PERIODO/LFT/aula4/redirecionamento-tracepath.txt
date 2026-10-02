@@ -1,0 +1,53 @@
+Redirecionamento de diferentes
+> - Redireciona a saida normal - stdout para um arquivo
+2> - Redireciona a saida de erro - stderr para umm arquivo
+>> - acrescenta ao final do arquivo, sem apagar nada do conteudo anterior
+2>> - acrescenta os erros ao final do arquivo
+
+Para fazermos um teste utilizando o tracerout e ser salvo, usaremos o >.
+
+Passo a passo
+1 - traceroute salvo em .txt
+	tracepath google.com
+	
+
+tracerout google.com > traceroute.txt
+
+1.1 - Salvo em traceroute.txt
+	cat traceroute.txt
+	less traceroute.txt
+
+2 - Acrescentar algo ao arquivo - novo resultado e adicionado ao final do arquivo
+	traceroute google.com >> traceroute.txt
+
+3. Utilizando o 2> para salvar somente os erros dentro traceroute.txt
+	traceroute google.com > traceroute.txt 2>&1
+	
+
+
+mkdir -p ./atividade 1 ./atividade2
+tree
+touch texto.txt
+cat >> texto2.txt
+Linha 1
+Linha 2
+
+ctrl + d + enter
+
+cp /etc/passwd . 
+
+ls
+pwd
+cat texto.txt
+
+echo "Linha 3 - Mostra na tela"
+
+O que sao e o que significa quando utilizamos 
+ls -l
+
+drxwrwxr-x
+-rw-rw-r--
+
+troca de  owner - utilizando o sudo
+sudo chown root texto.txt
+
