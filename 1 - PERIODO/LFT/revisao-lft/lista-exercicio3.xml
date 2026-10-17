@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<indexing>
+ <paragraph index="9" node_type="writer">Avaliação 1 parte 3</paragraph>
+ <paragraph index="10" node_type="writer">Lista 3 – Exercicios de Comando básicos – Permissoẽs no Linux</paragraph>
+ <paragraph index="11" node_type="writer">Primeiros passos ao utilizar o JS LINUX</paragraph>
+ <paragraph index="12" node_type="writer">adduser → thiagoadmin</paragraph>
+ <paragraph index="13" node_type="writer">password → admin@123</paragraph>
+ <paragraph index="14" node_type="writer">su usuario</paragraph>
+ <paragraph index="17" node_type="writer">cat &gt;lft/noite/revisao-permissoes/user-jslinux.txt</paragraph>
+ <paragraph index="18" node_type="writer">tree</paragraph>
+ <paragraph index="19" node_type="writer">cat lft/noite/revisao-permissoes/user-jslinux.txt</paragraph>
+ <paragraph index="21" node_type="writer">1. Um usuário tenta executar o arquivo script.sh com o comando:</paragraph>
+ <paragraph index="22" node_type="writer">./script.sh</paragraph>
+ <paragraph index="23" node_type="writer">Mas recebe a mensagem: Permission denied.</paragraph>
+ <paragraph index="24" node_type="writer">As permissões do arquivo são:</paragraph>
+ <paragraph index="25" node_type="writer">-rw-r—r--</paragraph>
+ <paragraph index="27" node_type="writer">Qual é o problema?</paragraph>
+ <paragraph index="29" node_type="writer">O arquivo não tem permissão de execução – x pra ninguem.</paragraph>
+ <paragraph index="30" node_type="writer">./script.sh pede ao kernel para executar o arquivo, e sem x ele recusa. Ter r só permite ler o conteúdo.</paragraph>
+ <paragraph index="31" node_type="writer">Para podermos resolver a situação utilizaremos a seguinte situação</paragraph>
+ <paragraph index="32" node_type="writer">chmod u+x script.sh  #só para o dono (mais restritivo, melhor prática)</paragraph>
+ <paragraph index="34" node_type="writer">2. 0 arquivo abaixo possui as seguintes permissões:</paragraph>
+ <paragraph index="35" node_type="writer">-rwxr-x--- 1 alberto alberto 20 Apr 16 15:27 texto1.txt</paragraph>
+ <paragraph index="36" node_type="writer">Quem pode executar esse arquivo?</paragraph>
+ <paragraph index="38" node_type="writer">Somente o dono -alberto e os membros do grupo –alberto,  Os other nao possuim, o root tambem consegue fazer porque o -x esta setado.</paragraph>
+ <paragraph index="39" node_type="writer">User = rwx – pode executar</paragraph>
+ <paragraph index="40" node_type="writer">group = r-x – pode executar</paragraph>
+ <paragraph index="41" node_type="writer">others = --- nada</paragraph>
+ <paragraph index="43" node_type="writer">3. Um usuário deseja permitir que todos os usuários possam ler um arquivo chamado</paragraph>
+ <paragraph index="44" node_type="writer">dados.txt.</paragraph>
+ <paragraph index="45" node_type="writer">Qual comando resolve corretamente?</paragraph>
+ <paragraph index="46" node_type="writer">Meusdados/</paragraph>
+ <paragraph index="48" node_type="writer">chmod a+r dados.txt</paragraph>
+ <paragraph index="49" node_type="writer">Estrutura de comentário – a= allusers / u = user / g=group / o =others</paragraph>
+ <paragraph index="50" node_type="writer">chmod ugo+r dados.txt  #defini que user + group + others poden fazer a leitura</paragraph>
+ <paragraph index="51" node_type="writer">chmod o+r dados.txt     # se grupo já lê, basta liberar others</paragraph>
+ <paragraph index="52" node_type="writer">chmod 644 dados.txt     # rw-r--r--, forma octal (também define o resto)</paragraph>
+ <paragraph index="54" node_type="writer">4. Um diretório possui as permissões:</paragraph>
+ <paragraph index="55" node_type="writer">drwx------ 2 alberto alberto 64 Apr 16 15:32 meusdados</paragraph>
+ <paragraph index="56" node_type="writer">drwx------</paragraph>
+ <paragraph index="57" node_type="writer">Outro usuário tenta executar o seguinte comando cd meusdados/ a partir do diretório</paragraph>
+ <paragraph index="58" node_type="writer">pai de meusdados/ , mas não consegue.</paragraph>
+ <paragraph index="59" node_type="writer">Qual o motivo?</paragraph>
+ <paragraph index="64" node_type="writer">Porque others não possui nenhuma permissão atribuida ---.</paragraph>
+ <paragraph index="65" node_type="writer">cd exige x – O diretório só permite a enteda do dono rxw, para que possamos liberar a entrada devemos utilizar</paragraph>
+ <paragraph index="66" node_type="writer">chmod o+x meusdados      # só entrar / acessar por nome</paragraph>
+ <paragraph index="67" node_type="writer">chmod o+rx meusdados     # entrar e listar</paragraph>
+ <paragraph index="70" node_type="writer">5. Um arquivo possui permissões:</paragraph>
+ <paragraph index="71" node_type="writer">-rw-rw-r--</paragraph>
+ <paragraph index="72" node_type="writer">O dono decide impedir que o grupo altere o arquivo, mas quer manter a leitura.</paragraph>
+ <paragraph index="73" node_type="writer">Qual comando deve usar?</paragraph>
+ <paragraph index="75" node_type="writer">Chmod g-w arquivo</paragraph>
+ <paragraph index="76" node_type="writer">O resultado do arquivo fica da seguinte maneira -rw-r—r--, ao utilizar g-w remove só o w do grupo , que já existe -r group , -rw owner and -r for others.</paragraph>
+ <paragraph index="78" node_type="writer">6. Um diretório qualquer possui permissões:</paragraph>
+ <paragraph index="79" node_type="writer">drwxr-xr-x</paragraph>
+ <paragraph index="80" node_type="writer">Um usuário comum tenta remover um arquivo dentro dele, mas não consegue.</paragraph>
+ <paragraph index="81" node_type="writer">Qual pode ser a causa?</paragraph>
+ <paragraph index="83" node_type="writer">O usuário comum (que não é dono) cai em others = r-x, ou seja, sem w no diretório. Remover um arquivo é uma operação sobre o diretório, então precisa de w (+ x) nele.</paragraph>
+ <paragraph index="85" node_type="writer">7. Um administrador executa: chmod 755 arquivo.sh</paragraph>
+ <paragraph index="86" node_type="writer">Quais são as permissões resultantes? Explique o motivo</paragraph>
+ <object index="88" name="Table1" object_type="table"/>
+ <paragraph index="90" node_type="writer" parent_index="88">Dígito</paragraph>
+ <paragraph index="93" node_type="writer" parent_index="88">Binário</paragraph>
+ <paragraph index="96" node_type="writer" parent_index="88">Cálculo</paragraph>
+ <paragraph index="99" node_type="writer" parent_index="88">Quem</paragraph>
+ <paragraph index="102" node_type="writer" parent_index="88">Permissão</paragraph>
+ <paragraph index="105" node_type="writer" parent_index="88">7</paragraph>
+ <paragraph index="108" node_type="writer" parent_index="88">111</paragraph>
+ <paragraph index="111" node_type="writer" parent_index="88">4+2+1</paragraph>
+ <paragraph index="114" node_type="writer" parent_index="88">dono</paragraph>
+ <paragraph index="117" node_type="writer" parent_index="88">rwx</paragraph>
+ <paragraph index="120" node_type="writer" parent_index="88">5</paragraph>
+ <paragraph index="123" node_type="writer" parent_index="88">101</paragraph>
+ <paragraph index="126" node_type="writer" parent_index="88">4+0+1</paragraph>
+ <paragraph index="129" node_type="writer" parent_index="88">grupo</paragraph>
+ <paragraph index="132" node_type="writer" parent_index="88">r-x</paragraph>
+ <paragraph index="135" node_type="writer" parent_index="88">5</paragraph>
+ <paragraph index="138" node_type="writer" parent_index="88">101</paragraph>
+ <paragraph index="141" node_type="writer" parent_index="88">4+0+1</paragraph>
+ <paragraph index="144" node_type="writer" parent_index="88">outros</paragraph>
+ <paragraph index="147" node_type="writer" parent_index="88">r-x</paragraph>
+ <paragraph index="151" node_type="writer">O  padrão clássico para scripts e diretórios públicos: só o dono edita, todos leem e executam.</paragraph>
+ <paragraph index="153" node_type="writer">8. Um usuário tenta listar o conteúdo de um diretório:</paragraph>
+ <paragraph index="154" node_type="writer">ls diretorio/</paragraph>
+ <paragraph index="155" node_type="writer">Mas recebe erro de permissão.</paragraph>
+ <paragraph index="156" node_type="writer">As permissões são:</paragraph>
+ <paragraph index="157" node_type="writer">d--xr-xr-x</paragraph>
+ <paragraph index="158" node_type="writer">Qual permissão está faltando para listar corretamente?</paragraph>
+ <paragraph index="160" node_type="writer">Falta o -r de leitura para o dono, o dono está atribuido somnete –x, permissão de entrada, Group and others r-x, que já e possivel fazer a listagem, então o erro acontece especificamente com owner pois ele cai na classe que so fica classifcado como entrada.</paragraph>
+ <paragraph index="161" node_type="writer">Para resolver podemos associar da seguinte maneira</paragraph>
+ <paragraph index="162" node_type="writer">chmod u+r directory</paragraph>
+ <paragraph index="167" node_type="writer">9. Um arquivo tem permissões:</paragraph>
+ <paragraph index="168" node_type="writer">-rw-------</paragraph>
+ <paragraph index="169" node_type="writer">Outro usuário tenta copiar o arquivo com:</paragraph>
+ <paragraph index="170" node_type="writer">cp arquivo.txt copia.txt</paragraph>
+ <paragraph index="171" node_type="writer">O que acontecerá?</paragraph>
+ <paragraph index="172" node_type="writer">A) A cópia será realizada normalmente</paragraph>
+ <paragraph index="173" node_type="writer">B) A cópia falhará por falta de leitura</paragraph>
+ <paragraph index="174" node_type="writer">C) A cópia falhará por falta de execução</paragraph>
+ <paragraph index="175" node_type="writer">D) A cópia criará um arquivo vazio</paragraph>
+ <paragraph index="179" node_type="writer">10. Um diretório possui permissões:</paragraph>
+ <paragraph index="180" node_type="writer">drwx-wx--x</paragraph>
+ <paragraph index="181" node_type="writer">Qual das ações abaixo um usuário externo (others) pode realizar?</paragraph>
+ <paragraph index="182" node_type="writer">– Listar arquivos</paragraph>
+ <paragraph index="183" node_type="writer">– Entrar no diretório</paragraph>
+ <paragraph index="184" node_type="writer">– Criar arquivos</paragraph>
+ <paragraph index="185" node_type="writer">– Ler arquivos</paragraph>
+ <paragraph index="187" node_type="writer">Justifique sua resposta</paragraph>
+ <paragraph index="189" node_type="writer">Others só podem entrar no diretório – pois esta atribuido somente entrada em diretório --x</paragraph>
+ <paragraph index="191" node_type="writer">11. Suponha que você tem em um diretório /home/Empresa os subdiretórios</paragraph>
+ <paragraph index="192" node_type="writer">memorandos, contratos, vendas e clientes. Cada um destes subdiretórios possui</paragraph>
+ <paragraph index="193" node_type="writer">centenas e centenas de arquivos e subdiretórios que foram criados por você. Agora,</paragraph>
+ <paragraph index="194" node_type="writer">você quer proteger o diretório /home/Empresa de forma que somente você e os</paragraph>
+ <paragraph index="195" node_type="writer">usuários do seu grupo UNIX possam abrir e listar o conteúdo do diretório, mas apenas</paragraph>
+ <paragraph index="196" node_type="writer">você possa salvar arquivos dentro do diretório. Indique qual a sequência de comandos</paragraph>
+ <paragraph index="197" node_type="writer">que deve ser executada para garantir os objetivos acima.</paragraph>
+ <paragraph index="199" node_type="writer">Chmod 750 /home/empresa</paragraph>
+ <paragraph index="200" node_type="writer">drwxr-x--- (dono rwx, grupo r-x, others ---).</paragraph>
+ <paragraph index="202" node_type="writer">Para podermos associar o grupo ao diretórios</paragraph>
+ <paragraph index="203" node_type="writer">chgrp name_group /home/empresa</paragraph>
+ <paragraph index="204" node_type="writer">chmod 750/home/empresa</paragraph>
+ <paragraph index="206" node_type="writer">2 Crie o arquivo meusdados.txt dentro do diretório ~/exercicios_01. Em seguida,</paragraph>
+ <paragraph index="207" node_type="writer">indique como usar chmod para definir as permissões abaixo:</paragraph>
+ <paragraph index="208" node_type="writer">mkdir -p exercicios_01</paragraph>
+ <paragraph index="209" node_type="writer">cat &gt;meusdados.txt</paragraph>
+ <paragraph index="210" node_type="writer">mv meusdados.txt exercicios_01</paragraph>
+ <paragraph index="211" node_type="writer">● Leitura e escrita para você e outros.</paragraph>
+ <paragraph index="212" node_type="writer">	chmod u=rw,g=,o=rw ~/exercicios_01/meusdados.txt</paragraph>
+ <paragraph index="213" node_type="writer">	chmod 606 ~/exercicios_01/meusdados.txt</paragraph>
+ <paragraph index="214" node_type="writer">● Nenhuma permissão para usuários de seu grupo UNIX;</paragraph>
+ <paragraph index="215" node_type="writer">	chmod 700 ~/exercicios_01</paragraph>
+ <paragraph index="216" node_type="writer">● Somente você pode listar os arquivos do diretório;</paragraph>
+ <paragraph index="217" node_type="writer">	chmod 751 ~/exercicios_01</paragraph>
+ <paragraph index="218" node_type="writer">Todos podem ler os arquivos do diretório, mas somente você e usuários de seu grupo</paragraph>
+ <paragraph index="219" node_type="writer">UNIX podem listar os arquivos do diretório</paragraph>
+ <paragraph index="221" node_type="writer">Você se encontra em uma situação difícil. Você criou um diretório ~/Trab_Prog_01 e nele você criou 4 (quatro) arquivos, cada um contendo um programa em linguagem ShellScrpt, para serem entregues ao professor da disciplina de LFT. Como você é um aluno consciente e correto (e não quer dar moleza), você executou os comandos UNIX abaixo com o objetivo de bloquear, para quaisquer usuários exceto você mesmo, o acesso de leitura e escrita aos arquivos:</paragraph>
+ <paragraph index="222" node_type="writer">cd chmod -R 600 Trab_Prog_01 Mas, depois de executados estes comandos, NEM MESMO VOCÊ consegue agora acessar seus próprios arquivos. O que você fez errado? Como corrigir o problema, mantendo o seu objetivo inicial?</paragraph>
+ <paragraph index="224" node_type="writer">Cd</paragraph>
+ <paragraph index="225" node_type="writer">chmod -R 600 Trab_Prog_01</paragraph>
+ <paragraph index="226" node_type="writer">o -R 600 aplicou rw------- também ao diretório, e diretório sem x não pode ser acessado (nem cd, nem abrir os arquivos dentro, nem listar com detalhes). Permissão 600 serve para arquivos; para diretório o mínimo útil para o dono é 700.</paragraph>
+ <paragraph index="227" node_type="writer">Correção do problema</paragraph>
+ <paragraph index="228" node_type="writer">cd</paragraph>
+ <paragraph index="229" node_type="writer">chmod 700 Trab_Prog_01		#devolve o x ao dono, baste termos acesso ao diretório pai</paragraph>
+ <paragraph index="230" node_type="writer">chmod 600 Trab_Prog_01/*		#arquivos: rw para o dono</paragraph>
+ <paragraph index="232" node_type="writer">chmod -R u=rwX,go= ~/Trab_Prog_01</paragraph>
+ <paragraph index="234" node_type="writer">Laboratório para teste dentro do servidor</paragraph>
+ <paragraph index="235" node_type="writer">Criar usuários de teste</paragraph>
+ <paragraph index="236" node_type="writer">useradd -m -s /bin/bash alberto </paragraph>
+ <paragraph index="237" node_type="writer">useradd -m -s /bin/bash visitante groupadd equipe &amp;&amp; usermod -aG equipe alberto</paragraph>
+ <paragraph index="238" node_type="writer">Cenário da questão 4</paragraph>
+ <paragraph index="239" node_type="writer">sudo -u alberto mkdir /tmp/lab/meusdados -p </paragraph>
+ <paragraph index="240" node_type="writer">sudo -u alberto chmod 700 /tmp/lab/meusdados </paragraph>
+ <paragraph index="241" node_type="writer">sudo -u visitante bash -c 'cd /tmp/lab/meusdados'     # deve falhar</paragraph>
+ <paragraph index="242" node_type="writer">Cenário da questão 9</paragraph>
+ <paragraph index="243" node_type="writer">sudo -u alberto bash -c 'echo teste &gt; /tmp/lab/arquivo.txt; chmod 600 /tmp/lab/arquivo.txt' sudo -u visitante cp /tmp/lab/arquivo.txt /tmp/lab/copia.txt   # Permission denied</paragraph>
+ <paragraph index="245" node_type="writer">Comando úteis para conferir os arquivos</paragraph>
+ <paragraph index="246" node_type="writer">ls -l              			 #permissões de arquivos</paragraph>
+ <paragraph index="247" node_type="writer">ls -ld diretorio  		 #permissões do PRÓPRIO diretório (não do conteúdo)</paragraph>
+ <paragraph index="248" node_type="writer">stat -c '%A %a %U:%G %n' arquivo   	#simbólico + octal + dono:grupo</paragraph>
+ <paragraph index="249" node_type="writer">namei -l /caminho/completo         	#permissões de cada nível do caminho</paragraph>
+ <paragraph index="250" node_type="writer">id usuario         			#grupos do usuário</paragraph>
+</indexing>
