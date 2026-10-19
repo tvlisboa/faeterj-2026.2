@@ -1,0 +1,702 @@
+###     Lista - exercicios
+###     Estrutura de repeticao for em c
+	
+###     Nivel 1 - Basico
+	1 - Contagem crescente
+	
+		/**
+		 * Exercicio 1 - Contagem crescente
+		 * Faça um programa que mostre na tela os números de 1 até 10, 
+		 * utilizando o comando for.
+		 */
+
+		 #include <stdio.h>
+		 #include <stdlib.h>
+
+		 int main(){
+
+		    printf("************************** \n");
+		    printf("* EXERCICIO 1 - CONTADOR * \n");
+		    printf("*   Iniciando contagem   * \n");
+		    printf("************************** \n");
+
+		    for(int i = 1 ; i<=10 ; i++){
+
+			printf("%d\n" , i);
+
+		    }
+
+		    system("pause");
+		    return 0;
+		 }
+		 
+	2 - Contagem regressiva
+	
+	/**
+	 * Exercicio 2 - Contagem regressiva
+	 * Uma nave espacial está se preparando para o lançamento. 
+	 * Faça um programa que mostre uma contagem regressiva de 10 até 1 e, 
+	 * ao final, exiba a mensagem “Lançamento!”.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    printf("*************************************** \n");
+	    printf("* EXERCICIO 2 - CONTAGEM REGRESSIVA   * \n");
+	    printf("*     INICIANDO LANÇAMENTO EM . . .   * \n");
+	    printf("*************************************** \n");
+
+	    for (int i = 10; i >=0; i--) {
+
+		printf("%d\n" , i);
+		
+	    }
+
+	    printf("************************************* \n");
+	    printf("*       LANÇAMENTO AUTORIZADO       * \n");
+	    printf("*              LANÇAR               * \n ");
+	    printf("************************************* \n");
+	    system("pause");
+	    return 0;
+	 }
+	 
+	3 - Numeros pares
+	
+	/**
+	 * Exercicio 3 - Numeros pares
+	 * Faça um programa que mostre todos 
+	 * os números pares de 2 até 50.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    int totPar = 0;
+	    int soma = 0;
+
+	    printf("*************************************** \n");
+	    printf("* EXERCICIO 3 - SOMA NUMEROS PARES    * \n");
+	    printf("*************************************** \n");
+
+	    for ( int i = 1 ; i <=50 ; i++) {
+		
+		if( i % 2 == 0){
+
+		    printf("Numero é par %d\n" , i);
+		    totPar = totPar + 1;
+		    soma = soma + i;
+		    
+		}
+
+	    }
+
+	    printf("Quantidade de numeros pares: %d\n" , totPar);
+	    printf("Soma dos numeros pares: %d\n" , soma);
+	    system("pause");
+	    return 0;
+
+	 }
+	 
+	4 - Tabuada
+	
+	/**
+	 * Exercicio 4 - Tabuada
+	 * Faça um programa que leia um número inteiro 
+	 * e mostre a tabuada desse número, de 1 a 10
+	 * Exemplo: se o usuário digitar 5, 
+	 * o programa deverá mostrar 
+	 * 5 x 1 = 5, 
+	 * 5 x 2 = 10 
+	 * e assim sucessivamente.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    int numero1;
+	    int resultado = 0;
+
+	    printf("************************* \n");
+	    printf("* EXERCICIO 4 - TABUADA * \n");
+	    printf("************************* \n");
+	    printf("Informe numero a seguir - para calcular a sua tabuada \n");
+	    scanf("%d" , &numero1);
+
+		for (int i = 1; i <= 10; i++) {
+		    
+		    resultado = numero1 * i;
+		    printf("%d x %d = %d\n" , numero1 , i , resultado);
+
+		}
+
+	    system("pause");
+	    return 0;
+	 }
+	 
+	5 - Soma dos numeros
+	
+	/**
+	 * Exercicio 5 - Soma dos numeros informados
+	 * Faça um programa que calcule e mostre 
+	 * a soma de todos os números inteiros de 1 até 100.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main (){
+
+	    int soma = 0;
+
+	    printf("************************** \n");
+	    printf(" EXERCICIO 5 - SOMATORIO * \n");
+	    printf("*   INICIANDO CONTAGEM   * \n");
+	    printf("************************** \n");
+
+	    for (int i = 1; i<=100 ; i++) {
+
+		printf("%d\n", i);              //imprimi na tela 1 a 1 ate chegar a 100
+		soma = soma + i;                //inicializa com valor = e vai incrementando o valor ate chegar a soma total
+		
+	    }
+
+	    printf("Soma dos numeros informados: %d\n" , soma);
+	    system("pause");
+	    return 0;
+	 }
+	
+	
+	Nivel 2 - Intermediario
+	6 - Media da turma
+	
+	/**
+	 * Exercicio 6 - Media de uma turma
+	 * Um professor precisa calcular a média 
+	 * das notas de uma turma com 10 alunos. 
+	 * Faça um programa que leia a nota de cada aluno, 
+	 * calcule a média da turma e mostre o resultado.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main (){
+
+	    double notas;
+	    double media;
+	    double soma = 0;
+
+	    printf("*********************** \n");
+	    printf("* EXERCICIO 6 - MEDIA * \n");
+	    printf("*********************** \n");
+
+	    printf("* INFORME AS NOTAS DOS ALUNOS A SEGUIR * \n");
+
+	    for (int i = 1 ; i<=10 ; i++) {
+
+		printf("Digite as notas a seguir: ");
+		scanf("%lf" , &notas);
+
+		soma = soma + notas;
+
+	    }
+
+		 media = soma / 10;
+
+		 /* aproveitamento da turma
+		  * Acima de 7 = aproveitamento bom
+		  * Acima de 5 = aproveitamento regular
+		  * Abaixo de 5 = aproveitamento ruim
+		 */
+
+		 if(media >=7 ){
+
+		    printf("*********************** \n");
+		    printf("Media final da turma: %lf\n" , media);
+		    printf("Aproveitamento da turma foi bom - Parabéns \n");
+		    printf("*********************** \n");
+
+		 }else if(media >=5){
+		    
+		    printf("*********************** \n");
+		    printf("Media final da turma: %lf\n" , media);
+		    printf("Aproveitamento da turma foi regular - Precisa ser melhorado \n");
+		    printf("*********************** \n");
+
+		 }else{
+
+		    printf("*********************** \n");
+		    printf("Media final da turma: %lf\n" , media);
+		    printf("Aproveitamento da turma foi ruim - Precisa ser revisto conteudo \n");
+		    printf("*********************** \n");
+
+		 }
+
+	    system("pause");
+	    return 0;
+
+	 }
+	
+	7 - Controle de vendas
+	
+	/**
+	 * Exercicio 7 - Controle de vendas
+	 * Uma loja deseja registrar as vendas realizadas durante 7 dias. 
+	 * Faça um programa que leia o valor vendido em cada dia e,
+	 * ao final, informe o total vendido na semana.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	   double vendasDia = 0;
+	   double totalVendido = 0;
+
+	   printf("****************************************** \n");
+	   printf("*     EXERCICIO 7 - CONTROLE DE VENDAS   * \n");
+	   printf("*  INFORME AS VENDAS NOS ULTIMOS 7 DIAS  * \n");
+	   printf("****************************************** \n");
+
+	   for (int i = 1; i <= 7; i++) {
+	      
+	      printf("Valor total diario: ");
+	      scanf("%lf" , &vendasDia);
+
+	      totalVendido = totalVendido + vendasDia;
+
+	   }
+	   
+	   printf("****************************************** \n");
+	   printf("Valor total vendido na semana: %.2lf\n" , totalVendido);
+	   printf("****************************************** \n");
+	   system("pause");
+	   return 0;
+	 }
+	 
+	8 - Numeros positivos e negativos
+	
+	/**
+	 * Exercicio 8 - Numeros positivos e negativos
+	 * Faça um programa que leia 15 números inteiros. 
+	 * Ao final, informe quantos números são positivos, 
+	 * quantos são negativos 
+	 * e quantos são iguais a zero.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    int numero;
+	    int totPositivo = 0;
+	    int totNegativo = 0;
+	    int totNeutro = 0;
+	    int totalNumeros = 0;
+
+	    printf("************************************* \n");
+	    printf("* EXERCICIO 8 - POSITIVO E NEGATIVO * \n");
+	    printf("************************************* \n");
+
+	    printf("Digite 15 numeros a seguir \n");
+
+	    for (int i = 1 ; i <= 15 ; i++) {
+		
+		printf("Digite: ");
+		scanf("%d" , &numero);
+
+		if(numero > 0){
+		    
+		    printf("Numero informado %d é positivo \n" , numero);
+		    totPositivo = totPositivo + 1;
+
+		}else if(numero == 0){
+
+		    printf("Numero informado %d é neutro \n" , numero);
+		    totNeutro = totNeutro + 1;
+
+		}else{
+
+		    printf("Numero informado %d é negativo \n" , numero);
+		    totNegativo = totNegativo + 1;
+
+		}
+
+	    }
+
+	    totalNumeros =(totPositivo + totNegativo + totNeutro);
+
+	    printf("************************************* \n");
+	    printf("Total de numeros positivos: %d\n" , totPositivo);
+	    printf("Total de numeros negativos: %d\n" , totNegativo);
+	    printf("Total de numeros neutros: %d\n" , totNeutro);
+	    printf("Total de numeros informados: %d\n" , totalNumeros);
+	    printf("************************************* \n");
+	    system("pause");
+	    return 0;
+	 }
+	 
+	9 - Maior numero
+	
+	/**
+	 * Exercicio 9 - Maior numero informado
+	 * Faça um programa que leia 10 números inteiros 
+	 * e mostre qual foi o maior número digitado.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main (){
+
+	    int numero1;
+	    int numeroMaior = 0;
+
+	    printf("************************************* \n");
+	    printf("*     EXERCICIO 9 - MAIOR NUMERO    * \n");
+	    printf("*    INFORME 10 NUMEROS A SEGUIR    * \n");
+	    printf("************************************* \n");
+
+	    for(int i = 1; i <= 10 ; i++){
+
+		printf("Digite: ");
+		scanf("%d" , &numero1);
+
+		if(numero1 > numeroMaior){
+
+		    numeroMaior = numero1;
+		}
+
+	    }
+
+	    printf("************************************* \n");
+	    printf("*Maior numero informado: %d\n" , numeroMaior);
+	    printf("*************************************** \n");
+	    system("pause");
+	    return 0;
+	 }
+ 
+	10 - Pesquisa de satisfacao
+	
+	/**
+	 * Exercicio 10 - Pesquisa de satisfação
+	 * Uma empresa realizou uma pesquisa com 20 clientes. 
+	 * Cada cliente atribuiu uma nota de 1 a 5 para o atendimento. 
+	 * Faça um programa que leia as notas e informe quantos clientes 
+	 * deram nota 5 e quantos deram nota menor ou igual a 3.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    int nota = 0;
+	    int totalNotas = 0;
+	    int totalMaior = 0;
+	    int totalMenor = 0;
+
+	    printf("************************************** \n");
+	    printf("* EXERCICIO 10 - PESQUISA SATISFACAO * \n");
+	    printf("************************************** \n");
+	    printf("*   Insira as informacoes abaixo     * \n");
+	    printf("* Informe a avalicao entre 1 e 5 a seguir * \n");
+
+
+	    /* numero de entradas */
+	    for (int i = 1 ; i <=20 ; i++) {
+
+		printf("Digite: ");
+		scanf("%d", &nota);
+		
+		if(nota>=5){
+
+		    totalMaior = totalMaior + 1;
+
+		}else if(nota <= 3){
+
+		    totalMenor = totalMenor + 1;
+
+		}
+
+	    }
+
+	    totalNotas = totalMaior + totalMenor;
+	    
+	    printf("************************************** \n");
+	    printf("Avaliação acima de 5: %d\n" , totalMaior);
+	    printf("Avaliacao abaixo de 3: %d\n" , totalMenor);
+	    printf("Total avaliacoes: %d\n" , totalNotas);
+	    printf("************************************** \n");
+	    system("pause");
+	    return 0;
+	 }
+	
+	Nivel 3 - Desafios
+	
+	11 - Calculo de fatorial
+	
+	/**
+	 * Exercicio 11 - Calculo de um fatorial
+	 * Faça um programa que leia um número inteiro não negativo e calcule seu fatorial.
+	 * Exemplo: se o usuário digitar 5, o programa deverá mostrar:
+	 * 5! = 120
+	 */
+
+
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <string.h>
+
+	int main() {
+
+	    int numero1;
+	    int contador;
+	    int fatorial;
+	    char resposta[2];
+
+	    do {
+
+		printf("Informe um numero a seguir, maior ou igual a 0: ");
+		scanf("%d", &numero1);
+
+		fatorial = 1;
+
+		if (numero1 < 0) {
+
+		    printf("Nao existem fatoriais para numeros negativos!\n");
+
+		} else {
+
+		    for (contador = numero1; contador >= 1; contador--) {
+
+		        fatorial = fatorial * contador;
+
+		    }
+
+		    printf("O valor do fatorial de %d e igual a %d\n",
+		           numero1, fatorial);
+		}
+
+		printf("Deseja continuar - informe [S/N]? ");
+		scanf("%1s", resposta);
+
+	    } while (strcmp(resposta, "N") != 0);
+
+	    return 0;
+	}
+
+	12 - Numeros primos
+	
+	/**
+	 * Exercicio 12 - Numeros primos
+	 * Faça um programa que leia um número inteiro 
+	 * maior que 1 e informe se ele é primo ou não.
+	 * Um número primo possui exatamente dois divisores positivos: 1 e ele mesmo.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    int numero;
+	    int contador = 1;
+	    int contDiv = 0;
+
+	    printf("Exercicio - 8 - Numeros primos \n");
+	    printf("Informe um numero a seguir: ");
+	    scanf("%d" , &numero);
+
+	    do {
+
+	       if(numero % contador == 0){
+		    contDiv++;
+
+	       }
+
+	       contador++;
+
+	    } while (contador<=numero);
+
+		if(contDiv == 2){
+
+		    printf("O numero %d , e primo \n" , numero);
+
+		}else{
+
+		    printf("O numero %d , nao e primo \n" , numero);
+
+		}
+
+	    system("pause");
+	    return 0;
+	 }
+	
+	13 - Sequencia de fibonacci
+	
+	/**
+	 * Exercicio 13 - Sequência de fibonacci
+	 * Faça um programa que mostre os primeiros 15 termos da sequência de Fibonacci, começando por:
+	 * 0, 1, 1, 2, 3, 5, 8, 13…
+	 * Cada termo, a partir do terceiro, é obtido pela soma dos dois termos anteriores.
+	 */
+
+	#include <stdio.h>
+	#include <stdlib.h>
+
+	int main() {
+
+	    int inicio = 0;
+	    int final = 1;
+	    int proximo;
+
+	    printf("************************************\n");
+	    printf("*   EXERCICIO 13  -  FIBONACCI     *\n");
+	    printf("************************************\n");
+
+	    printf("%d, %d", inicio, final);
+	    printf("* Inicio da contagem de Fibonacci  * \n");
+
+	    for (int i = 1; i <= 15; i++) {
+
+		proximo = (inicio + final);
+
+		printf(", %d", proximo);
+
+		inicio = final;
+		final = proximo;
+	    }
+
+
+	    printf("* Fim da contagem de Fibonacci  * \n");
+	    system("pause");
+	    return 0;
+	}
+	
+	14 - Caixa eletronico
+	
+	/**
+	 * Exercicio 14 - Caixa eletrônico & total de saques
+	 * Um caixa eletrônico precisa registrar os saques de 12 clientes. 
+	 * Faça um programa que leia o valor sacado por cada cliente e, ao final, mostre:
+	 * O valor total sacado.
+	 * A média dos valores sacados.
+	 * O maior valor de saque registrado.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+
+	 int main(){
+
+	    double valorSaque = 0;                       //valor que usuario ira informar
+	    double maiorSaque = 0;                       //maior valor sacado
+	    double menorSaque = 0;                       //menor valor sacado
+	    double valorTotalSacado = 0;                 //valor total sacado
+	    double mediaSaques = 0;                      //media de saques feitos
+	    int qtdSaques = 0;                           //qtd de saques feitos
+	    
+	    printf("******************************************* \n");
+	    printf("*    EXERCICIO 14 - CAIXA ELETRONICO      * \n");
+	    printf("*   INFORME O VALOR DOS SAQUES A SEGUIR   * \n");
+	    printf("******************************************* \n");
+
+	    for (int i =1 ; i<=5 ; i++) {
+		
+		printf("Digite o valor do saque: ");
+		scanf("%lf" , &valorSaque);
+
+	     if(i == 1){
+		maiorSaque = valorSaque;
+		menorSaque = valorSaque;
+	     }
+
+	     if( valorSaque > maiorSaque){
+
+		maiorSaque = valorSaque;
+
+	     }else if(valorSaque < menorSaque){
+
+		menorSaque = valorSaque;
+
+	     }
+
+		valorTotalSacado = valorTotalSacado + valorSaque;
+		qtdSaques = qtdSaques + 1;
+		
+	    }
+	    
+	    mediaSaques = valorTotalSacado / qtdSaques;
+	    
+	    printf("******************************************* \n");
+	    printf("Total de valor sacado: %.2lf\n" , valorTotalSacado);
+	    printf("Media de saques: %.2lf\n" , mediaSaques);
+	    printf("Maior saque: %.2lf\n" , maiorSaque);
+	    printf("Menor saque: %.2lf\n" , menorSaque);
+	    printf("Total de saques feitos: %d\n" , qtdSaques);
+	    system("pause");
+	    return 0;
+
+	 }
+ 
+	15 - Numero maior e menor informado
+	
+	/**
+	 * Exercicio 11 - Maior e menor numero informado
+	 * Faça um programa que leia 10 números inteiros 
+	 * e mostre qual foi o maior 
+	 * e menor número digitado.
+	 */
+
+	 #include <stdio.h>
+	 #include <stdlib.h>
+
+	 int main(){
+
+	    int numero1;
+	    int numeroMaior = -999;
+	    int numeroMenor = 999;
+
+	    printf("*************************************** \n");
+	    printf("* EXERCICIO 11 - MAIOR E MENOR NUMERO * \n");
+	    printf("*     INFORME 10 NUMEROS A SEGUIR     * \n");
+	    printf("*************************************** \n");
+
+	    for (int i = 1 ; i <= 10 ; i++) {
+
+		printf("Digite: ");
+		scanf("%d" , &numero1);
+
+		if (numero1 > numeroMaior) {
+		    
+		    numeroMaior = numero1;
+		    
+		}
+		
+		if (numero1 < numeroMenor) {
+		    
+		    numeroMenor = numero1;
+
+		}
+
+	    }
+	    
+	    printf("*************************************** \n");
+	    printf("Maior numero informado: %d\n" , numeroMaior);
+	    printf("Menor numero informado: %d\n" , numeroMenor);
+	    printf("*************************************** \n");
+	    return 0;
+	 }
+	
+	
